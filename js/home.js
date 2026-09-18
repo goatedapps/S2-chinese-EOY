@@ -76,5 +76,13 @@ document.getElementById("quickSelect").addEventListener("click", (e) => {
   }
 });
 
+document.getElementById("modeToggle").addEventListener("click", (e) => {
+  const btn = e.target.closest(".mode-opt");
+  if (!btn) return;
+  document.querySelectorAll(".mode-opt").forEach((o) => o.classList.remove("active"));
+  btn.classList.add("active");
+  document.getElementById("startLink").href = btn.dataset.page;
+});
+
 persist();
 renderList();

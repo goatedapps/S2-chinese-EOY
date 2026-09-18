@@ -27,11 +27,20 @@
   <div class="hero">
     <div class="hero-text">
       <h1 class="cjk">词汇练习</h1>
-      <p>40 words for the S2 Chinese EOY exam. Tick the ones you want to practice, or use a quick pick below, then choose a mode.</p>
+      <p>40 words for the S2 Chinese EOY exam. Hit start to jump straight in, or pick your words first below.</p>
     </div>
     <div class="seal-badge">
       <div class="num" id="selectedCount">40</div>
       <div class="label">selected</div>
+    </div>
+  </div>
+
+  <div class="start-block">
+    <a class="pill-btn primary start-btn" id="startLink" href="flashcards.html">Start</a>
+    <div class="mode-toggle" id="modeToggle">
+      <button class="mode-opt active" data-page="flashcards.html">Flashcards</button>
+      <button class="mode-opt" data-page="game.html">Game</button>
+      <button class="mode-opt" data-page="fillblank.html">Fill Blank</button>
     </div>
   </div>
 
@@ -51,21 +60,6 @@
   </div>
 
   <div class="paper-panel" id="vocabList"></div>
-
-  <div class="mode-grid">
-    <a class="ticket" href="flashcards.html">
-      <div class="zh">抽认卡</div>
-      <div class="en">Flashcards — flip the card, hear it read aloud.</div>
-    </a>
-    <a class="ticket" href="game.html">
-      <div class="zh">接词游戏</div>
-      <div class="en">Word Drop — catch the right word before time runs out.</div>
-    </a>
-    <a class="ticket" href="fillblank.html">
-      <div class="zh">填空测验</div>
-      <div class="en">Fill in the Blank — guess it, then check yourself.</div>
-    </a>
-  </div>
 </main>
 
 <script src="js/data.js"></script>
