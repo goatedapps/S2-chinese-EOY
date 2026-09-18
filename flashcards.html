@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>抽认卡 · Flashcards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">词</span>
+    <span class="brand-text">Vocab Practice</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html" data-nav="home">Home</a>
+    <a href="flashcards.html" data-nav="flashcards">Flashcards</a>
+    <a href="game.html" data-nav="game">Game</a>
+    <a href="fillblank.html" data-nav="fillblank">Fill Blank</a>
+  </div>
+</nav>
+
+<main>
+  <div class="stage-wrap">
+    <p class="stage-hint">Tap the card to flip it. Tap the speaker to hear it read aloud.</p>
+
+    <div id="emptyNote" class="empty-note hidden">No words selected — go back to Home and pick some words first.</div>
+
+    <div id="cardArea" class="stage-wrap">
+      <div class="progress-line" id="progress">1 / 1</div>
+
+      <div class="card-scene">
+        <div class="card-inner" id="cardInner">
+          <div class="card-face card-front cjk" id="cardFront"></div>
+          <div class="card-face card-back" id="cardBack">
+            <div class="meaning" id="cardMeaning"></div>
+            <div class="pinyin" id="cardPinyin"></div>
+            <div class="example cjk" id="cardExample"></div>
+            <div class="card-seal cjk">词</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls-row">
+        <button class="icon-btn" id="prevBtn" title="Previous">‹</button>
+        <button class="icon-btn speak" id="speakBtn" title="Read aloud">🔊</button>
+        <button class="icon-btn" id="nextBtn" title="Next">›</button>
+        <button class="icon-btn" id="shuffleBtn" title="Shuffle">🔀</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/flashcards.js"></script>
+</body>
+</html>

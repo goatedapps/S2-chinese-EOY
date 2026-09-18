@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>词汇练习 · Vocab Practice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">词</span>
+    <span class="brand-text">Vocab Practice</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html" data-nav="home">Home</a>
+    <a href="flashcards.html" data-nav="flashcards">Flashcards</a>
+    <a href="game.html" data-nav="game">Game</a>
+    <a href="fillblank.html" data-nav="fillblank">Fill Blank</a>
+  </div>
+</nav>
+
+<main>
+  <div class="hero">
+    <div class="hero-text">
+      <h1 class="cjk">词汇练习</h1>
+      <p>40 words for the S2 Chinese EOY exam. Tick the ones you want to practice, or use a quick pick below, then choose a mode.</p>
+    </div>
+    <div class="seal-badge">
+      <div class="num" id="selectedCount">40</div>
+      <div class="label">selected</div>
+    </div>
+  </div>
+
+  <div class="select-controls" id="quickSelect">
+    <button class="pill-btn" data-range="1-10">1–10</button>
+    <button class="pill-btn" data-range="11-20">11–20</button>
+    <button class="pill-btn" data-range="21-30">21–30</button>
+    <button class="pill-btn" data-range="31-40">31–40</button>
+    <button class="pill-btn" data-action="random10">Random 10</button>
+    <button class="pill-btn" data-action="all">Select all</button>
+    <button class="pill-btn ghost" data-action="clear">Clear</button>
+  </div>
+
+  <div class="list-meta">
+    <span>Tap a word to include it</span>
+    <span id="totalCount">40 words</span>
+  </div>
+
+  <div class="paper-panel" id="vocabList"></div>
+
+  <div class="mode-grid">
+    <a class="ticket" href="flashcards.html">
+      <div class="zh">抽认卡</div>
+      <div class="en">Flashcards — flip the card, hear it read aloud.</div>
+    </a>
+    <a class="ticket" href="game.html">
+      <div class="zh">接词游戏</div>
+      <div class="en">Word Drop — catch the right word before time runs out.</div>
+    </a>
+    <a class="ticket" href="fillblank.html">
+      <div class="zh">填空测验</div>
+      <div class="en">Fill in the Blank — guess it, then check yourself.</div>
+    </a>
+  </div>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>填空测验 · Fill in the Blank</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">词</span>
+    <span class="brand-text">Vocab Practice</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html" data-nav="home">Home</a>
+    <a href="flashcards.html" data-nav="flashcards">Flashcards</a>
+    <a href="game.html" data-nav="game">Game</a>
+    <a href="fillblank.html" data-nav="fillblank">Fill Blank</a>
+  </div>
+</nav>
+
+<main>
+  <div class="stage-wrap">
+    <p class="stage-hint">Read the sentence, work out the missing word offline, then check yourself.</p>
+
+    <div id="emptyNote" class="empty-note hidden">No words selected — go back to Home and pick some words first.</div>
+
+    <div id="quizArea" class="stage-wrap">
+      <div class="game-topbar" style="max-width: 620px;">
+        <div class="stat">
+          <div class="val" id="progressStat">1 / 1</div>
+          <div class="lab">card</div>
+        </div>
+        <div class="stat">
+          <div class="val" id="scoreStat">0</div>
+          <div class="lab">correct</div>
+        </div>
+      </div>
+
+      <div class="worksheet">
+        <div class="sentence cjk" id="sentenceEl"></div>
+        <div class="answer-box hidden" id="answerBox">
+          <div class="zh" id="answerZh"></div>
+          <div class="py" id="answerPy"></div>
+          <div class="en" id="answerEn"></div>
+        </div>
+      </div>
+
+      <button class="pill-btn primary" id="showAnswerBtn">Show answer</button>
+
+      <div class="judge-row hidden" id="judgeRow">
+        <button class="judge-btn right" id="rightBtn">Got it right</button>
+        <button class="judge-btn wrong" id="wrongBtn">Got it wrong</button>
+      </div>
+    </div>
+
+    <div id="summaryArea" class="summary hidden">
+      <h2 class="cjk">完成</h2>
+      <div class="score-num"><span id="finalScore">0</span> / <span id="finalTotal">0</span></div>
+      <div class="controls-row">
+        <button class="pill-btn primary" id="restartBtn">Practice again</button>
+        <a class="pill-btn ghost" href="index.html">Back to home</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/fillblank.js"></script>
+</body>
+</html>
