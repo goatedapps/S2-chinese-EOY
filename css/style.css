@@ -143,57 +143,32 @@ main {
 }
 
 .hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-  flex-wrap: wrap;
-  margin-bottom: 36px;
+  margin-bottom: 22px;
 }
 
-.hero-text h1 {
+.hero h1 {
   font-size: 40px;
   font-weight: 700;
   color: var(--paper);
-  margin-bottom: 10px;
 }
 
-.hero-text p {
-  max-width: 46ch;
-  color: var(--text-muted);
-  font-size: 16px;
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* Seal stamp badge */
-.seal-badge {
-  flex-shrink: 0;
-  width: 108px;
-  height: 108px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, var(--seal) 0%, var(--seal-dark) 100%);
-  border: 3px solid var(--brass);
+.selected-line {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow-paper);
-}
-
-.seal-badge .num {
-  font-size: 34px;
-  font-weight: 700;
-  line-height: 1;
-  color: var(--paper);
   font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--brass);
+  margin-top: 8px;
 }
 
-.seal-badge .label {
-  font-size: 11px;
-  color: var(--paper);
-  opacity: 0.85;
-  margin-top: 2px;
+.seal-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--seal);
+  margin-right: 7px;
+  flex-shrink: 0;
 }
 
 /* ===== Select controls ===== */
@@ -241,8 +216,7 @@ main {
 /* ===== Vocab list (paper panel) ===== */
 .list-meta {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  justify-content: flex-end;
   color: var(--text-muted);
   font-size: 13px;
   margin-bottom: 10px;
@@ -319,16 +293,18 @@ main {
 /* ===== Start block ===== */
 .start-block {
   display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
   margin-bottom: 28px;
 }
 
 .start-btn {
   text-decoration: none;
-  font-size: 16px;
-  padding: 14px 34px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 18px 56px;
+  box-shadow: 0 10px 26px rgba(225, 70, 42, 0.4);
 }
 
 .mode-toggle {
@@ -357,8 +333,27 @@ main {
 }
 
 @media (max-width: 720px) {
-  .hero { flex-direction: column-reverse; align-items: flex-start; }
   .vocab-meaning { display: none; }
+
+  .topnav { padding: 10px 16px; }
+  .brand-text { display: none; }
+  .brand-mark { width: 30px; height: 30px; font-size: 19px; }
+  .nav-links a { padding: 6px 10px; font-size: 13px; }
+
+  main { padding: 18px 16px 28px; }
+  .hero h1 { font-size: 32px; }
+
+  .start-btn { width: 100%; text-align: center; padding: 16px 24px; }
+
+  .stage-wrap { gap: 14px; }
+  .game-topbar .stat .val { font-size: 19px; }
+  .timer-ring, .timer-ring svg { width: 52px; height: 52px; }
+  .timer-ring .time-num { font-size: 15px; }
+  .sentence-board { padding: 14px 16px; font-size: 17px; }
+  .worksheet { padding: 20px 18px; }
+  .worksheet .sentence { font-size: 18px; line-height: 34px; }
+  .card-scene { height: 240px; }
+  .card-front { font-size: 52px; }
 }
 
 /* ===== Stage (flashcards / game / fillblank shared) ===== */
@@ -579,7 +574,7 @@ main {
   position: relative;
   width: 100%;
   max-width: 640px;
-  height: 360px;
+  height: clamp(160px, 36vh, 360px);
   background: var(--surface);
   border: 1px solid var(--surface-2);
   border-radius: var(--radius-paper);
