@@ -20,6 +20,7 @@
     <a href="flashcards.html" data-nav="flashcards">Flashcards</a>
     <a href="game.html" data-nav="game">Game</a>
     <a href="fillblank.html" data-nav="fillblank">Fill Blank</a>
+    <a href="wrongword.html" data-nav="wrongword">Fix Word</a>
   </div>
 </nav>
 
@@ -35,6 +36,7 @@
       <button class="mode-opt active" data-page="flashcards.html">Flashcards</button>
       <button class="mode-opt" data-page="game.html">Game</button>
       <button class="mode-opt" data-page="fillblank.html">Fill Blank</button>
+      <button class="mode-opt" data-page="wrongword.html">Fix Word</button>
     </div>
   </div>
 
@@ -44,12 +46,14 @@
     <button class="pill-btn" data-range="21-30">21–30</button>
     <button class="pill-btn" data-range="31-40">31–40</button>
     <button class="pill-btn" data-action="random10">Random 10</button>
+    <button class="pill-btn" data-action="often-wrong" id="oftenWrongBtn">Often wrong</button>
     <button class="pill-btn" data-action="all">Select all</button>
     <button class="pill-btn ghost" data-action="clear">Clear</button>
   </div>
 
   <div class="list-meta">
     <span id="totalCount">40 words</span>
+    <button class="pill-btn ghost" id="resetStatsBtn">Reset stats</button>
   </div>
 
   <div class="paper-panel" id="vocabList"></div>

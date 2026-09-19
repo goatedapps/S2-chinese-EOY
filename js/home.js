@@ -6,6 +6,16 @@ const totalEl = document.getElementById("totalCount");
 
 totalEl.textContent = VOCAB.length + " words";
 
+const stats = loadStats();
+const oftenWrong = VOCAB.filter((v) => {
+  const s = stats[v.chinese];
+  return s && s.wrong > s.right;
+}).map((v) => v.chinese);
+
+const oftenWrongBtn = document.getElementById("oftenWrongBtn");
+oftenWrongBtn.textContent = `Often wrong (${oftenWrong.length})`;
+oftenWrongBtn.disabled = !oftenWrong.length;
+
 const savedSelection = loadSelection();
 // First-ever visit: nothing saved yet, so start with everything checked.
 let selected = new Set(savedSelection.length ? savedSelection : VOCAB.map((v) => v.chinese));
@@ -42,7 +52,15 @@ function renderList() {
     meaning.className = "vocab-meaning";
     meaning.textContent = v.meaning;
 
-    row.append(cb, word, pinyin, meaning);
+    const s = stats[v.chinese];
+    if (s) {
+      const stat = document.createElement("span");
+      stat.className = "vocab-stat";
+      stat.innerHTML = `✓ ${s.right} <span class="bad">✗ ${s.wrong}</span>`;
+      row.append(cb, word, pinyin, meaning, stat);
+    } else {
+      row.append(cb, word, pinyin, meaning);
+    }
     listEl.appendChild(row);
   });
 }
@@ -66,6 +84,10 @@ document.getElementById("quickSelect").addEventListener("click", (e) => {
     setSelection(shuffle(VOCAB).slice(0, 10).map((v) => v.chinese));
     return;
   }
+  if (btn.dataset.action === "often-wrong") {
+    setSelection(oftenWrong);
+    return;
+  }
   if (btn.dataset.action === "all") {
     setSelection(VOCAB.map((v) => v.chinese));
     return;
@@ -74,6 +96,12 @@ document.getElementById("quickSelect").addEventListener("click", (e) => {
     setSelection([]);
     return;
   }
+});
+
+document.getElementById("resetStatsBtn").addEventListener("click", () => {
+  if (!confirm("Reset all right/wrong counts?")) return;
+  clearStats();
+  location.reload();
 });
 
 document.getElementById("modeToggle").addEventListener("click", (e) => {

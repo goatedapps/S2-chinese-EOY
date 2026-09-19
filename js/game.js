@@ -1,7 +1,7 @@
 setActiveNav("game");
 
-const SESSION_TIME = 20;
-const FALL_DURATION = 2600;
+const SESSION_TIME = 40;
+const FALL_DURATION = 3800;
 const SPAWN_INTERVAL = 700;
 const RADIUS = 27;
 const CIRC = 2 * Math.PI * RADIUS;
@@ -108,12 +108,14 @@ function spawnFallingWord() {
 
     if (cand.chinese === currentTarget.chinese) {
       playSound("correct.mp3");
+      recordResult(currentTarget.chinese, true);
       score++;
       scoreStat.textContent = score;
       flashBoard("flash-good");
       setupSentence();
     } else {
       playSound("wrong-answer.mp3");
+      recordResult(currentTarget.chinese, false);
       misses++;
       missStat.textContent = misses;
       flashBoard("flash-bad");

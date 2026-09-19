@@ -1,4 +1,5 @@
-setActiveNav("fillblank");
+const quizMode = document.body.dataset.quiz;
+setActiveNav(quizMode);
 
 const emptyNote = document.getElementById("emptyNote");
 const quizArea = document.getElementById("quizArea");
@@ -32,7 +33,10 @@ if (!queue.length) {
 function loadCard() {
   const word = queue[idx];
   const example = pickRandom(word.examples);
-  sentenceEl.innerHTML = blankSentence(example, word.chinese);
+  sentenceEl.innerHTML =
+    quizMode === "wrongword"
+      ? wrongWordSentence(example, word.chinese, pickRandom(word.confusables))
+      : blankSentence(example, word.chinese);
   answerBox.classList.add("hidden");
   showAnswerBtn.classList.remove("hidden");
   judgeRow.classList.add("hidden");
@@ -56,12 +60,14 @@ function next() {
 }
 
 rightBtn.addEventListener("click", () => {
+  recordResult(queue[idx].chinese, true);
   score++;
   scoreStat.textContent = score;
   next();
 });
 
 wrongBtn.addEventListener("click", () => {
+  recordResult(queue[idx].chinese, false);
   next();
 });
 

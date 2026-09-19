@@ -3,6 +3,7 @@ const VOCAB = [
     "chinese": "沮丧",
     "pinyin": "jǔ sàng",
     "meaning": "discouraged; depressed",
+    "confusables": ["丧失", "阻丧"],
     "examples": [
       "虽然比赛输了，他感到十分沮丧，但还是决定继续努力。",
       "考试成绩不理想，她感到很沮丧。",
@@ -15,6 +16,7 @@ const VOCAB = [
     "chinese": "身材",
     "pinyin": "shēn cái",
     "meaning": "body figure; physique",
+    "confusables": ["身份", "材料", "身世"],
     "examples": [
       "姐姐经常运动，因此保持着健康匀称的身材。",
       "她每天坚持跑步，希望保持苗条的身材。",
@@ -27,6 +29,7 @@ const VOCAB = [
     "chinese": "心旷神怡",
     "pinyin": "xīn kuàng shén yí",
     "meaning": "relaxed and refreshed",
+    "confusables": ["心惊胆战", "心神不宁", "心不在焉"],
     "examples": [
       "站在山顶欣赏美丽的风景，令人感到心旷神怡。",
       "周末到海边散步，让我感到心旷神怡。",
@@ -39,6 +42,7 @@ const VOCAB = [
     "chinese": "隐约",
     "pinyin": "yǐn yuē",
     "meaning": "faintly; vaguely",
+    "confusables": ["隐藏", "隐瞒", "约定"],
     "examples": [
       "透过浓雾，我隐约看见远处有一座高楼。",
       "我隐约听见有人在门外说话。",
@@ -51,6 +55,7 @@ const VOCAB = [
     "chinese": "变迁",
     "pinyin": "biàn qiān",
     "meaning": "changes; transition",
+    "confusables": ["迁移", "搬迁", "变故"],
     "examples": [
       "随着时代的变迁，人们的生活方式也发生了很大的改变。",
       "这座城市经历了几十年的变迁，面貌已经完全不同了。",
@@ -63,6 +68,7 @@ const VOCAB = [
     "chinese": "彻底",
     "pinyin": "chè dǐ",
     "meaning": "thoroughly; completely",
+    "confusables": ["透彻", "完整"],
     "examples": [
       "为了解决问题，我们必须彻底找出事情发生的原因。",
       "工人把房间彻底打扫了一遍。",
@@ -75,6 +81,7 @@ const VOCAB = [
     "chinese": "驰名",
     "pinyin": "chí míng",
     "meaning": "famous; renowned",
+    "confusables": ["驰骋", "著名"],
     "examples": [
       "新加坡以干净整洁的城市环境驰名世界。",
       "这家餐厅以传统美食驰名全国。",
@@ -87,6 +94,7 @@ const VOCAB = [
     "chinese": "恐怖",
     "pinyin": "kǒng bù",
     "meaning": "terrifying; horrible",
+    "confusables": ["恐怕", "恐龙"],
     "examples": [
       "那部电影的情节太恐怖了，弟弟看了一半就不敢继续看。",
       "昨晚的雷雨声听起来非常恐怖。",
@@ -99,6 +107,7 @@ const VOCAB = [
     "chinese": "自卑",
     "pinyin": "zì bēi",
     "meaning": "feel inferior; inferiority",
+    "confusables": ["卑鄙", "自私"],
     "examples": [
       "他以前因为成绩不好而感到自卑，后来在老师的鼓励下变得更有信心。",
       "不要因为自己的外表而感到自卑。",
@@ -111,6 +120,7 @@ const VOCAB = [
     "chinese": "温馨",
     "pinyin": "wēn xīn",
     "meaning": "warm; heart-warming",
+    "confusables": ["温习", "温度", "馨香"],
     "examples": [
       "一家人围在桌旁吃晚餐，形成了一幅温馨的画面。",
       "生日会上，朋友们为她准备了一个温馨的惊喜。",
@@ -123,6 +133,7 @@ const VOCAB = [
     "chinese": "诱惑",
     "pinyin": "yòu huò",
     "meaning": "temptation; entice",
+    "confusables": ["疑惑", "引导", "诱人"],
     "examples": [
       "面对网络游戏的诱惑，我们必须懂得控制自己的时间。",
       "美食的诱惑让他忍不住多吃了一块蛋糕。",
@@ -135,6 +146,7 @@ const VOCAB = [
     "chinese": "毅力",
     "pinyin": "yì lì",
     "meaning": "perseverance; willpower",
+    "confusables": ["毅然", "力气", "权力"],
     "examples": [
       "学习一门新的语言需要耐心和毅力，不能轻易放弃。",
       "他靠着坚定的毅力完成了长跑比赛。",
@@ -147,6 +159,7 @@ const VOCAB = [
     "chinese": "抗拒",
     "pinyin": "kàng jù",
     "meaning": "resist; reject",
+    "confusables": ["抵抗", "抗议", "对抗"],
     "examples": [
       "起初他很抗拒参加活动，但后来发现活动其实很有意义。",
       "小孩子有时会抗拒吃自己不喜欢的食物。",
@@ -159,6 +172,7 @@ const VOCAB = [
     "chinese": "符合",
     "pinyin": "fú hé",
     "meaning": "conform to; meet",
+    "confusables": ["符号", "整合", "混合"],
     "examples": [
       "这项建议符合大多数居民的需求，因此获得大家支持。",
       "这间房子的设计符合我们的要求。",
@@ -171,6 +185,7 @@ const VOCAB = [
     "chinese": "鲜艳",
     "pinyin": "xiān yàn",
     "meaning": "bright-coloured; vivid",
+    "confusables": ["新鲜", "鲜美"],
     "examples": [
       "花园里开满了颜色鲜艳的花朵，吸引了许多游客。",
       "她穿了一件鲜艳的红色裙子。",
@@ -183,6 +198,7 @@ const VOCAB = [
     "chinese": "恐惧",
     "pinyin": "kǒng jù",
     "meaning": "fear; dread",
+    "confusables": ["恐怖", "恐怕"],
     "examples": [
       "面对困难时，我们不能因为恐惧失败而停止尝试。",
       "小女孩第一次坐飞机时，心里充满了恐惧。",
@@ -195,6 +211,7 @@ const VOCAB = [
     "chinese": "委婉",
     "pinyin": "wěi wǎn",
     "meaning": "tactful; indirect",
+    "confusables": ["委屈", "委托", "弯曲"],
     "examples": [
       "老师用委婉的语气指出我的错误，让我更容易接受意见。",
       "她没有直接拒绝朋友，而是委婉地说明自己的困难。",
@@ -207,6 +224,7 @@ const VOCAB = [
     "chinese": "模糊",
     "pinyin": "mó hu",
     "meaning": "blurry; vague",
+    "confusables": ["模仿", "糊涂"],
     "examples": [
       "由于照片年代久远，里面人物的样子已经十分模糊。",
       "玻璃上有很多水汽，使窗外的景物变得模糊。",
@@ -219,6 +237,7 @@ const VOCAB = [
     "chinese": "嘈杂",
     "pinyin": "cáo zá",
     "meaning": "noisy",
+    "confusables": ["喧哗", "复杂"],
     "examples": [
       "食堂在午休时间十分嘈杂，我们几乎听不清彼此说话。",
       "街上的汽车喇叭声非常嘈杂。",
@@ -231,6 +250,7 @@ const VOCAB = [
     "chinese": "走廊",
     "pinyin": "zǒu láng",
     "meaning": "corridor",
+    "confusables": ["走路", "画廊"],
     "examples": [
       "下课后，许多学生在走廊上聊天，老师提醒大家不要挡住通道。",
       "教室外的走廊很宽，可以让很多人同时通过。",
@@ -243,6 +263,7 @@ const VOCAB = [
     "chinese": "姿势",
     "pinyin": "zī shì",
     "meaning": "posture; position",
+    "confusables": ["势力", "姿色", "形势"],
     "examples": [
       "长时间使用电脑时，我们应该保持正确的姿势，以免身体不适。",
       "老师提醒学生坐着的时候要保持正确的姿势。",
@@ -255,6 +276,7 @@ const VOCAB = [
     "chinese": "社交媒体",
     "pinyin": "shè jiāo méi tǐ",
     "meaning": "social media",
+    "confusables": ["社会媒体", "社交礼仪", "社区活动"],
     "examples": [
       "社交媒体虽然方便我们交流，但我们也要小心保护个人资料。",
       "很多年轻人每天都会使用社交媒体与朋友联系。",
@@ -267,6 +289,7 @@ const VOCAB = [
     "chinese": "缺陷",
     "pinyin": "quē xiàn",
     "meaning": "defect; flaw",
+    "confusables": ["缺乏", "缺席", "陷阱"],
     "examples": [
       "每个人都有自己的优点和缺陷，我们应该学会接受自己。",
       "工程师发现机器有一个严重的缺陷。",
@@ -279,6 +302,7 @@ const VOCAB = [
     "chinese": "嫌",
     "pinyin": "xián",
     "meaning": "dislike; complain about",
+    "confusables": ["赚", "谦", "兼"],
     "examples": [
       "他从不嫌家里的条件普通，反而十分珍惜父母的付出。",
       "妹妹嫌这件衣服太旧，不愿意穿。",
@@ -291,6 +315,7 @@ const VOCAB = [
     "chinese": "简陋",
     "pinyin": "jiǎn lòu",
     "meaning": "simple and crude; poorly equipped",
+    "confusables": ["简称", "陋习", "简介"],
     "examples": [
       "虽然这间小屋十分简陋，但一家人仍然生活得很快乐。",
       "他们住在一间设备简陋的小房子里。",
@@ -303,6 +328,7 @@ const VOCAB = [
     "chinese": "政府",
     "pinyin": "zhèng fǔ",
     "meaning": "government",
+    "confusables": ["政治", "政党", "财政"],
     "examples": [
       "政府推出了多项环保措施，鼓励公众减少使用塑料制品。",
       "政府正在建设新的公共交通设施。",
@@ -315,6 +341,7 @@ const VOCAB = [
     "chinese": "经济",
     "pinyin": "jīng jì",
     "meaning": "economy; economic",
+    "confusables": ["经验", "经典"],
     "examples": [
       "旅游业的发展能够为国家带来经济收益和更多就业机会。",
       "这项政策有助于促进当地经济发展。",
@@ -327,6 +354,7 @@ const VOCAB = [
     "chinese": "接纳",
     "pinyin": "jiē nà",
     "meaning": "accept; embrace",
+    "confusables": ["纳税", "交纳", "接壤"],
     "examples": [
       "我们应该学会接纳与自己不同的人，并尊重彼此的差异。",
       "新同学刚来到班上，大家都应该主动接纳他。",
@@ -339,6 +367,7 @@ const VOCAB = [
     "chinese": "障碍",
     "pinyin": "zhàng ài",
     "meaning": "obstacle; barrier",
+    "confusables": ["故障", "阻止"],
     "examples": [
       "只要愿意努力，困难就不一定会成为我们前进的障碍。",
       "语言障碍使他们很难进行沟通。",
@@ -351,6 +380,7 @@ const VOCAB = [
     "chinese": "荣誉",
     "pinyin": "róng yù",
     "meaning": "honour; glory",
+    "confusables": ["荣华", "繁荣"],
     "examples": [
       "能够代表学校参加全国比赛，对他来说是一项极大的荣誉。",
       "获得这个奖项是她一生中最大的荣誉之一。",
@@ -363,6 +393,7 @@ const VOCAB = [
     "chinese": "接触",
     "pinyin": "jiē chù",
     "meaning": "come into contact with",
+    "confusables": ["触摸", "触动", "接壤"],
     "examples": [
       "通过阅读不同类型的书籍，我们可以接触到更多新的知识。",
       "来到新学校后，我有机会接触来自不同国家的同学。",
@@ -375,6 +406,7 @@ const VOCAB = [
     "chinese": "欣赏",
     "pinyin": "xīn shǎng",
     "meaning": "appreciate; admire",
+    "confusables": ["欣喜", "赏赐", "欣然"],
     "examples": [
       "我们不但要懂得欣赏别人的优点，也要从中学习。",
       "游客来到这里欣赏美丽的风景。",
@@ -387,6 +419,7 @@ const VOCAB = [
     "chinese": "茁壮",
     "pinyin": "zhuó zhuàng",
     "meaning": "grow vigorously; thrive",
+    "confusables": ["壮观", "壮丽"],
     "examples": [
       "在老师和父母的关爱下，孩子们健康茁壮地成长。",
       "这些小树在充足的阳光下茁壮成长。",
@@ -399,6 +432,7 @@ const VOCAB = [
     "chinese": "同甘共苦",
     "pinyin": "tóng gān gòng kǔ",
     "meaning": "share joys and hardships",
+    "confusables": ["同床异梦", "同流合污", "各奔东西"],
     "examples": [
       "真正的朋友会在困难时互相帮助，与彼此同甘共苦。",
       "夫妻应该同甘共苦，一起面对生活中的困难。",
@@ -411,6 +445,7 @@ const VOCAB = [
     "chinese": "嬉戏",
     "pinyin": "xī xì",
     "meaning": "play; frolic",
+    "confusables": ["戏剧", "戏院", "嬉皮"],
     "examples": [
       "几个孩子在公园里快乐地嬉戏，脸上充满了笑容。",
       "小朋友们在草地上嬉戏，玩得非常开心。",
@@ -423,6 +458,7 @@ const VOCAB = [
     "chinese": "寻找",
     "pinyin": "xún zhǎo",
     "meaning": "search for; look for",
+    "confusables": ["寻常", "寻思", "寻仇"],
     "examples": [
       "警方和居民一起寻找那名在公园走失的孩子。",
       "我正在寻找一本适合初学者阅读的中文书。",
@@ -435,6 +471,7 @@ const VOCAB = [
     "chinese": "流逝",
     "pinyin": "liú shì",
     "meaning": "pass; elapse",
+    "confusables": ["流行", "逝世", "流浪"],
     "examples": [
       "随着时间不断流逝，我们更应该珍惜与家人相处的机会。",
       "时间慢慢流逝，太阳也渐渐落下了。",
@@ -447,6 +484,7 @@ const VOCAB = [
     "chinese": "俏皮",
     "pinyin": "qiào pí",
     "meaning": "playful; lively",
+    "confusables": ["皮肤", "皮球"],
     "examples": [
       "妹妹说话时露出俏皮的笑容，把全家人都逗笑了。",
       "小女孩做了一个俏皮的动作，大家都笑了起来。",
@@ -459,6 +497,7 @@ const VOCAB = [
     "chinese": "承载",
     "pinyin": "chéng zài",
     "meaning": "carry; bear; embody",
+    "confusables": ["承认", "承诺"],
     "examples": [
       "这座老建筑承载着许多居民珍贵的童年回忆。",
       "这本相册承载着我们一家人的美好回忆。",
@@ -471,6 +510,7 @@ const VOCAB = [
     "chinese": "翠绿",
     "pinyin": "cuì lǜ",
     "meaning": "emerald green; lush green",
+    "confusables": ["翠鸟", "绿灯"],
     "examples": [
       "雨后的山林一片翠绿，空气也变得格外清新。",
       "春天来了，树上长出了翠绿的新叶。",

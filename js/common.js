@@ -1,4 +1,5 @@
 const STORAGE_KEY = "s2zh_selection_v1";
+const STATS_KEY = "s2zh_stats_v1";
 
 function loadSelection() {
   try {
@@ -26,6 +27,36 @@ function getSelectedVocab() {
   const set = new Set(sel);
   const filtered = VOCAB.filter((v) => set.has(v.chinese));
   return filtered.length ? filtered : VOCAB.slice();
+}
+
+// { [chinese]: { right, wrong } }, shared by every practice mode.
+function loadStats() {
+  try {
+    const stats = JSON.parse(localStorage.getItem(STATS_KEY));
+    return stats && typeof stats === "object" ? stats : {};
+  } catch (e) {
+    return {};
+  }
+}
+
+function clearStats() {
+  try {
+    localStorage.removeItem(STATS_KEY);
+  } catch (e) {
+    /* storage unavailable, ignore */
+  }
+}
+
+function recordResult(chinese, correct) {
+  const stats = loadStats();
+  const entry = stats[chinese] || { right: 0, wrong: 0 };
+  entry[correct ? "right" : "wrong"]++;
+  stats[chinese] = entry;
+  try {
+    localStorage.setItem(STATS_KEY, JSON.stringify(stats));
+  } catch (e) {
+    /* storage unavailable, ignore */
+  }
 }
 
 function shuffle(arr) {
@@ -77,6 +108,10 @@ primeVoices();
 
 function blankSentence(sentence, word) {
   return sentence.split(word).join('<span class="blank">&nbsp;</span>');
+}
+
+function wrongWordSentence(sentence, word, wrongWord) {
+  return sentence.split(word).join(`<u class="wrong-word">${wrongWord}</u>`);
 }
 
 function setActiveNav(id) {
